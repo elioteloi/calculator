@@ -24,140 +24,36 @@ const Modulus = document.getElementById("Modulus");
 const Equal = document.getElementById("Equal");
 const Clear = document.getElementById("clear");
 
-one.addEventListener("click", () => {
-  array.push(one.value);
+const elementsArray = [
+  resultInput,
+  one,
+  two,
+  tree,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
+  zero,
+  Addition,
+  Subtraction,
+  Multiplication,
+  Division,
+  Modulus,
+];
 
-  localStorage.setItem("array", JSON.stringify(array));
+elementsArray.forEach((element) => {
+  element.addEventListener("click", () => {
+    console.log(element);
+    array.push(element.value);
 
-  console.log("local", localStorage);
+    localStorage.setItem("array", JSON.stringify(array));
 
-  displayValue();
-});
+    console.log("local", localStorage);
 
-two.addEventListener("click", () => {
-  array.push(two.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-tree.addEventListener("click", () => {
-  array.push(tree.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-four.addEventListener("click", () => {
-  array.push(four.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-five.addEventListener("click", () => {
-  array.push(five.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-six.addEventListener("click", () => {
-  array.push(six.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-seven.addEventListener("click", () => {
-  array.push(seven.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-eight.addEventListener("click", () => {
-  array.push(eight.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-nine.addEventListener("click", () => {
-  array.push(nine.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-zero.addEventListener("click", () => {
-  array.push(zero.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-Addition.addEventListener("click", () => {
-  array.push(Addition.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-Subtraction.addEventListener("click", () => {
-  array.push(Subtraction.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-Multiplication.addEventListener("click", () => {
-  array.push(Multiplication.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-Division.addEventListener("click", () => {
-  array.push(Division.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
-});
-
-Modulus.addEventListener("click", () => {
-  array.push(Modulus.value);
-
-  localStorage.setItem("array", JSON.stringify(array));
-  console.log("local", localStorage);
-
-  displayValue();
+    displayValue();
+  });
 });
 
 Equal.addEventListener("click", () => {
